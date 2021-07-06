@@ -1,0 +1,25 @@
+{% extends "newsweb\base.html" %}
+{% block body %}
+  <div class = 'container'>
+    <h1><center>News</h1>
+      <center>
+    <div class='row'>
+    {% for i in api.articles %}
+     {%if i.description %}
+    <div class='col'>
+        <div class="card" style="width: 18rem;">
+          <img src="{{i.urlToImage}}" class="card-img-top" alt='image loading'>
+            <div class="card-body">
+                <h5 class="card-title">{{i.title | truncatechars:100}}</h5>
+              <p class="card-text">{{i.description | truncatechars:150}}</p>
+              <a href="{{i.url}}" target="_blank" class="btn btn-primary">Read More</a>
+             </div>
+         </div>
+           <br>
+      </div>
+      {% endif %}
+      {% endfor %}
+      </div>
+  </div>
+
+{% endblock %}

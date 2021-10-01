@@ -1,0 +1,80 @@
+.narhd{
+    border: 5px solid darkblue;
+    font-size: 100px;
+    background-color:#2766db;
+    color:wheat;
+    width: 100%;;
+    text-align: center;
+    font-style: italic;
+    border:1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px #bdbdbd;
+    -webkit-box-shadow: 0 0 10px #bdbdbd;
+    box-shadow: 0 0 10px #bdbdbd;
+}
+span{
+    color: black;
+}
+
+.i1{
+    align-content: center;
+    width: 90%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom : 30px;
+    background-color: white;
+    border:1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px #bdbdbd;
+    -webkit-box-shadow: 0 0 10px #bdbdbd;
+    box-shadow: 0 0 10px #bdbdbd;
+}
+
+.t1{
+    font-style: bold;
+    border: 5px solid black;
+    background-color:black;
+    color: white;
+    text-overflow: inherit;
+    border:1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.p1{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    font-style:bold;
+    display:block;
+    background-color:#DCE1E3;
+    border:1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px #bdbdbd;
+    -webkit-box-shadow: 0 0 10px #bdbdbd;
+    box-shadow: 0 0 10px #bdbdbd;
+}
+
+.emiya, .saber, .iris, .kirei{
+    float: left;
+    height: 250px;
+    background-color: white;
+    border:1px solid #bdbdbd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 10px #bdbdbd;
+    -webkit-box-shadow: 0 0 10px #bdbdbd;
+    box-shadow: 0 0 10px #bdbdbd;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.name{
+    font: 100px;
+    font-style: bold;
+    text-align: center;
+}

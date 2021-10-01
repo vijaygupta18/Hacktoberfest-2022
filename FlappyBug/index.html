@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()" onkeydown="jump()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bug</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="game">
+      <span class="best"></span>
+      <span id="score"></span>
+      <div id="block"></div>
+      <div id="hole"></div>
+      <div id="character">
+        <p>🐞️</p>
+      </div>
+    </div>
+    <h1>Flappy Bug</h1>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: 'AIzaSyDAWKzmqBkLNXXmY_NPmiJnkTkiDjg_fjs',
+        authDomain: 'flappybug-ef18e.firebaseapp.com',
+        projectId: 'flappybug-ef18e',
+        storageBucket: 'flappybug-ef18e.appspot.com',
+        messagingSenderId: '136127193876',
+        appId: '1:136127193876:web:e466ecf9a0ceea33291801',
+        measurementId: 'G-RP9SK2M6F8',
+        databaseURL:
+          'https://flappybug-ef18e-default-rtdb.asia-southeast1.firebasedatabase.app',
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

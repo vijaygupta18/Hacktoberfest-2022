@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: black;
+    height: 15vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 380px;
+}
+.search{
+    text-align: center;
+    width: 350px;
+    height: 25px;
+}
+.searchicon{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+.icon{
+    height: 80px;
+
+}
+nav ul{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 15px; 
+    font-size: 32px;
+    color: blanchedalmond;
+    }
+.container{
+    min-height: calc(100vh - 15vh - 12vh);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: burlywood;
+    background-color: black;
+    height: 12vh;
+    font-family: 'Spectral', serif;
+}

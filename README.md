@@ -4,6 +4,8 @@
 
 ## This repository is for collecting the different projects made by people who wants to contribute in open source.
 
+- Do give a star if your liked this repo.
+
 
 ### Note - Your Project Must be valid.
         - Do not Copy anyone else's Project or work.

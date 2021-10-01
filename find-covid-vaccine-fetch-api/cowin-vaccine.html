@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID 19 VACCINE SLOT AVAILABILITY FINDER</title>
+</head>
+<style>
+.formContainer{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+#dataContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border: 1px solid grey;
+    width: 200px;
+    height: 200px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="formContainer">
+            <label>Enter City pin code</label>
+            <input placeholder="277001" id="pincode" type="text">
+            <label> Enter date</label>
+            <input placeholder="30-05-2021" id="date" type="text">
+            <button id="btn">Check Availability</button>
+        </div>
+        <div id="dataContainer">
+                <p>No data found !</p>
+        </div>
+    </div>
+</body>
+<script>
+
+
+    let btn = document.getElementById("btn")
+    let dataContainer = document.getElementById("dataContainer")
+    btn.addEventListener('click', ()=>{
+        let pincode = document.getElementById("pincode").value
+        let date = document.getElementById("date").value
+       console.log(pincode)
+       console.log(date)
+       url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode=${pincode}&date=${date}`
+       fetch(url).then((response)=>{
+            return response.json()
+        }).then((data)=>{
+            centers = data.centers
+                let a = ""
+            centers.forEach((center,index) => {
+                    // console.log(center)
+                    let b = `
+                                <div class="card">
+                                    <p>${center.name}</p>
+                                    <p>${center.address}</p>
+                                    <p>${center.state_name}</p>
+                                    <p>${center.district_name}</p>
+                                    <p>${center.block_name}</p>
+                                    <p>${center.sessions[0].vaccine}</p>
+                                </div>
+                            
+                               
+                            `               
+                    a += b
+            
+            });
+
+            dataContainer.innerHTML = a
+            
+        }).catch((error)=>{
+            console.error(error)
+        })
+    })
+</script>
+</html>

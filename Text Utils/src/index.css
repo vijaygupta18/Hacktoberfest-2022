@@ -1,0 +1,44 @@
+
+.badg{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    content: '';
+    caret-color: transparent;
+    
+    
+}
+.badg:hover{
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+
+.badg_container{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #eef;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(90, 139, 255);
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(11, 74, 177);
+  }

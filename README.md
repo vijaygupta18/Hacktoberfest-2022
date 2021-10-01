@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Hacktoberfest-2021
+An Open Source repository to Teach people How to contribute to open sources.
+# Hacktoberfest-2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![homepage](banner.jpeg)
 
-## Available Scripts
+## This repository is for collecting the different projects made by people who wants to contribute in open source.
 
-In the project directory, you can run:
+        ## - Do give a star if you liked this repo.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Note - Your Project Must be valid.
+        - Do not Copy anyone else's Project or work.
+- Anyone can add any type of valid html-css web page depends on you.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- You can add any small projects you have made.
 
-### `npm test`
+- You can add programs too, in any programming language, but your program must be something different or unique.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Do not just re-edit the file or make some small changes this kind of PRs will not be accepted.
 
-### `npm run build`
+- Do not add anyone else's work in this repository.It will leads to failure of your pull request.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ 
+##  `Steps To Generate PR(Pull Request)`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Fork this repository
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
 
-### Code Splitting
+# Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Now clone the forked repository to your system. Go to your GitHub account, open the forked repository, click on the code button and then clone the repository.
 
-### Analyzing the Bundle Size
+*if you want to use the terminal, use the following commands*
+after you fork the repository , open the terminal type the given command
+```
+git clone https://github.com/{your-github-username}/Hacktober-2020.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+# Create a branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Then create a branch on your local repository to solve a problem.
 
-### Advanced Configuration
+*terminal commands*
+```
+git checkout -b your_new_branch_name
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+# Add & commit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Make necessary changes and commit those changes.
 
-### `npm run build` fails to minify
+*terminal commands*
+```
+git add .
+git commit -m "your-commit-message"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+
+# Push changes to GitHub
+
+Finally push your local repository to remote repository
+Compare & Submit a Pull Request
+
+*terminal commands*
+```
+git push origin <branch-name>
+
+```
+
+We're happy to merge valid pull requests to this repository!
+

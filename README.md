@@ -1,6 +1,6 @@
 # Hacktoberfest-2021
 
-[!homepage](banner.jpeg)
+![homepage](banner.jpeg)
 
 ## This repository is for collecting the different projects made by people who wants to contribute in open source.
 

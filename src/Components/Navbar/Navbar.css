@@ -1,0 +1,22 @@
+nav {
+  width: 100%;
+  height: 10vh;
+  background-color: #111;
+  box-sizing: border-box;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.nav_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.nav_img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

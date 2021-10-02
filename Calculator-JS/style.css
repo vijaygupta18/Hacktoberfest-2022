@@ -1,0 +1,40 @@
+.screen
+{ 
+    text-align: right;
+    width: 267px;
+    height: 35px;
+    outline: 1px solid rgb(228, 97, 10);
+    display: table-cell;
+    vertical-align: middle
+}
+.calc{
+    margin: 100px auto;
+    width: 400px;
+    height: max-content;
+}
+.row1 button:nth-child(1),.row button:nth-child(1){
+    margin-left: 0px;
+}
+.row1{
+    margin-top: 15px;
+}
+.row > button{
+/* background-color: rgb(228, 97, 10); */
+margin-left: 5px;
+outline: 1px solid grey;
+border: none;
+width: 60px;
+font-size: 15px;
+margin-top: 15px;
+height: 35px;
+}
+.row1 > button{
+    margin-left: 5px;
+outline: 1px solid orange;
+border: none;
+width: 60px;
+font-size: 15px;
+color: white;
+height: 35px;
+    background-color: rgb(228, 97, 10);
+}

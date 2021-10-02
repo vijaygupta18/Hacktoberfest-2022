@@ -1,35 +1,36 @@
-def heapify(array, a, b):
-	largest = b 
-	l = 2 * b + 1
-	root = 2 * b + 2	 
+# Updated Python program for implementation of heap Sort
+def heapify(arr, n, i):
+	largest = i 
+	l = 2 * i + 1	 # left = 2*i + 1
+	r = 2 * i + 2	 # right = 2*i + 2
 
-	if l < a and array[b] < array[l]:
-		largest = l
+	if l < n and arr[large] < arr[l]:
+		large = l
+	if r < n and arr[large] < arr[r]:
+		large = r
 
-	if root < a and array[largest] < array[root]:
-		largest = root
+	# Change root, if needed
+	if large != i:
+		arr[i], arr[large] = arr[large], arr[i] # swap
 
-	# Change root
-	if largest != b:
-	    array[b], array[largest] = array[largest], array[b]
-	    heapify(array, a, largest)
+		heapify(arr, n, large)
 
-# sort an array of given size
-def Heap_Sort(array):
-	a = len(array)
 
-	# maxheap..
-	for b in range(a // 2 - 1, -1, -1):
-		heapify(array, a, b)
+def heapSort(arr):
+	n = len(arr)
 
-	# extract elements
-	for b in range(a-1, 0, -1):
-		array[b], array[0] = array[0], array[b] # swap
-		heapify(array, b, 0)
+	# Build a maxheap.
+	for i in range(n//2 - 1, -1, -1):
+		heapify(arr, n, i)
+	for i in range(n-1, 0, -1):
+		arr[i], arr[0] = arr[0], arr[i] # swap
+		heapify(arr, i, 0)
 
-# Driver code 
-array = [ 7, 2, 5, 6, 3, 1, 8, 4]
-print("The original array is: ", array)
-Heap_Sort(array)
-a = len(array)
-print ("Array after sorting is: ", array)
+
+# Driver code
+arr = [12, 11, 13, 5, 6, 7]
+heapSort(arr)
+n = len(arr)
+print("Sorted array is")
+for i in range(n):
+	print("%d" % arr[i]),

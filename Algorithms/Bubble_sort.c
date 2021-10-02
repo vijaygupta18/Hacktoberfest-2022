@@ -1,40 +1,36 @@
 #include <stdio.h>
 #include <conio.h>
 
-void main()
+int main()
 {
-    int size, list[100];
-    int i, j, min, swap;
-    printf("Enter the size of list: ");
-    scanf("%d", &size);
-    printf("Enter  %d integer values:\n\n", size);
-    for (i = 0; i < size; i++)
+  int array[100], n, c, d, swap;
+
+  printf("Enter number of elements you want to find\n");
+  scanf("%d", &n);
+
+  printf("Enter %d integers\n", n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+
+  for (c = 0 ; c < n - 1; c++)
+  {
+    for (d = 0 ; d < n - c - 1; d++)
     {
-        scanf("%d", &list[i]);
+      if (array[d] > array[d+1]) // For decreasing order use '<' instead of '>' 
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+      }
     }
-    printf("Printing array \n");
-    printf("\n");
-    for (i = 0; i < size; i++)
-    {
-        printf("%d\t", list[i]);
-    }
-    printf("\n");
-    for (i = 0; i < size; i++)
-    {
-        //min = 0;
-        for (j = 0; j < size - i - 1; j++)
-        {
-            if (list[j] > list[j + 1])
-            {
-                swap = list[j];
-                list[j] = list[j + 1];
-                list[j + 1] = swap;
-            }
-        }
-    }
-    printf("\nSorted Array:\n");
-    printf("\n");
-    for (i = 0; i < size; i++)
-        printf("%d\t", list[i]);
-    printf("\n");
+  }
+
+  printf("Sorted list of elements in ascending order:\n");
+
+  for (c = 0; c < n; c++)
+     printf("%d\n", array[c]);
+
+  return 0;
 }
+

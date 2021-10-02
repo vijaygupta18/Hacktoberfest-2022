@@ -1,18 +1,31 @@
-# Hacktoberfest-2021
-An Open Source repository to Teach people How to contribute to open sources.
-
-Bonus - Create 4 PRs and you'll get a chance to earn a t-shirt or plant a tree.
 
 
+<h1 align="center">  Hacktoberfest-2021 </h1>
+<p align="center"> An Open Source repository to Teach people How to contribute to open sources.</p>
+
+___<p align="center"> 💥🔥  Bonus - Create 4 PRs and you'll get a chance to earn a t-shirt or plant a tree. 💥🔥</p>___
+<p align="center">
+  <a href="#">
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+  <a href="https://github.com/vijaygupta18/Hacktoberfest-2021/commits/main">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vijaygupta18/Hacktoberfest-2021">
+  </a>
+  <a href="https://github.com/vijaygupta18/Hacktoberfest-2021/issues">
+        <img alt="GitHub issues" src="https://img.shields.io/github/issues/brenovambaster/Projeto-TreeManager?color=red">
+  </a>
+</p>
 
 ![homepage](banner.jpeg)
+
+
 
 ## This repository is for collecting the different projects made by people who wants to contribute in open source.
 
         ## - Do give a star if you liked this repo.
 
 
-### Note - Your Project Must be valid.
+## Note - Your Project Must be valid.
         - Do not Copy anyone else's Project or work.
 - Anyone can add any type of valid html-css web page depends on you.
 
@@ -30,17 +43,17 @@ Bonus - Create 4 PRs and you'll get a chance to earn a t-shirt or plant a tree.
 .
 
  
-##  `Steps To Generate PR(Pull Request)`
+#  `Steps To Generate PR(Pull Request)`
 
 
 
 
 
-# Fork this repository
+## Fork this repository
 
 Fork this repository by clicking on the fork button on the top of this page. This will create a copy of this repository in your account.
 
-# Clone the repository
+## Clone the repository
 
 Now clone the forked repository to your system. Go to your GitHub account, open the forked repository, click on the code button and then clone the repository.
 
@@ -51,7 +64,7 @@ git clone https://github.com/{your-github-username}/Hacktober-2020.git
 
 ```
 
-# Create a branch
+## Create a branch
 
 Then create a branch on your local repository to solve a problem.
 
@@ -61,7 +74,7 @@ git checkout -b your_new_branch_name
 
 ```
 
-# Add & commit
+## Add & commit
 
 Make necessary changes and commit those changes.
 
@@ -72,7 +85,7 @@ git commit -m "your-commit-message"
 
 ```
 
-# Push changes to GitHub
+## Push changes to GitHub
 
 Finally push your local repository to remote repository
 Compare & Submit a Pull Request

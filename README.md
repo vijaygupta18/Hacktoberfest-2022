@@ -10,7 +10,7 @@ ___<p align="center"> 💥🔥  Bonus - Create 4 PRs and you'll get a chance to 
         <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/vijaygupta18/Hacktoberfest-2021">
   </a>
   <a href="https://github.com/vijaygupta18/Hacktoberfest-2021/issues">
-        <img alt="GitHub issues" src="https://img.shields.io/github/issues/brenovambaster/Projeto-TreeManager?color=red">
+        <img alt="GitHub issues" src="https://img.shields.io/github/issues/vijaygupta18/Hacktoberfest-2021?color=red">
   </a>
 </p>
 

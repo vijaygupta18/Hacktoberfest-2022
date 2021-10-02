@@ -1,5 +1,4 @@
 // all sorting algorithms
-//author Harsh Vardhan
 
 //BUBBLE SORT
 #include <stdio.h>
@@ -83,40 +82,53 @@ void SelectionSort(int A[],int n)
 
 // quick sort
 
-#include <stdio.h>
-#include<stdlib.h>
-void swap(int *x,int *y)
-{
-    int temp=*x;
-    *x=*y;
-    *y=temp;
+#include<stdio.h>
+void quicksort(int number[25],int first,int last){
+   int i, j, pivot, temp;
+
+   if(first<last){
+      pivot=first;
+      i=first;
+      j=last;
+
+      while(i<j){
+         while(number[i]<=number[pivot]&&i<last)
+            i++;
+         while(number[j]>number[pivot])
+            j--;
+         if(i<j){
+            temp=number[i];
+            number[i]=number[j];
+            number[j]=temp;
+         }
+      }
+
+      temp=number[pivot];
+      number[pivot]=number[j];
+      number[j]=temp;
+      quicksort(number,first,j-1);
+      quicksort(number,j+1,last);
+
+   }
 }
-int partition(int A[],int l,int h)
-{
-    int pivot=A[l];
-    int i=l,j=h;
 
-    do
-    {
-        do{i++;}while(A[i]<=pivot);
-        do{j--;}while(A[j]>pivot);
+int main(){
+   int i, count, number[25];
 
-        if(i<j)swap(&A[i],&A[j]);
-    }while(i<j);
+   printf("How many elements are u going to enter?: ");
+   scanf("%d",&count);
 
-    swap(&A[l],&A[j]);
-    return j;
-}
-void QuickSort(int A[],int l,int h)
-{
-    int j;
+   printf("Enter %d elements: ", count);
+   for(i=0;i<count;i++)
+      scanf("%d",&number[i]);
 
-    if(l<h)
-    {
-        j=partition(A,l,h);
-        QuickSort(A,l,j);
-        QuickSort(A,j+1,h);
-    }
+   quicksort(number,0,count-1);
+
+   printf("Order of Sorted elements: ");
+   for(i=0;i<count;i++)
+      printf(" %d",number[i]);
+
+   return 0;
 }
 
 // Iterative merge sort

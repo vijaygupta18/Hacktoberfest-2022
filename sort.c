@@ -268,3 +268,43 @@ void CountSort(int A[],int n)
         else j++;
     }
 }
+
+//Counting Sort
+
+#include<stdio.h>
+#include<string.h>
+
+void countSort(int a[], int n){
+	int arr[10];
+	int max = a[0];
+	for (int i = 1; i < n; i++) {
+	    if (a[i] > max)
+	    	max = a[i];
+  	}
+  	int count[10];
+	memset(count,0,sizeof(count));
+
+	for(int i=0; i<n; i++){
+		++count[a[i]];
+	}
+	for(int j=1;j<=max;j++){
+		count[j] = count[j] + count[j-1];
+	}
+	for (int i = n - 1; i >= 0; i--) {
+	    arr[count[a[i]] - 1] = a[i];
+	    count[a[i]]--;
+  	}
+
+  	for (int i = 0; i < n; i++) {
+    	a[i] = arr[i];
+  	}
+}
+
+int main(){
+	int arr[] = {3,1,5,8,9};
+	countSort(arr,5);
+	for(int i=0;i<5;i++){
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+}

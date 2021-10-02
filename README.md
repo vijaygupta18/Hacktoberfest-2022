@@ -1,5 +1,3 @@
-
-
 <h1 align="center">  Hacktoberfest-2021 </h1>
 <p align="center"> An Open Source repository to Teach people How to contribute to open sources.</p>
 

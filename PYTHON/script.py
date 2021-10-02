@@ -1,5 +1,6 @@
+# This is a email script, with which u can automate your emails. You can send 100 of mails in one go..
 
-import pandas as pd
+
 import smtplib
 
 with smtplib.SMTP('smtp.gmail.com', 587) as smtp:

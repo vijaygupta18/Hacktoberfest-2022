@@ -1,6 +1,6 @@
 # Hacktoberfest-2021
 An Open Source repository to Teach people How to contribute to open sources.
-# Hacktoberfest-2021
+
 
 ![homepage](banner.jpeg)
 

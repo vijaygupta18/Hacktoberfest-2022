@@ -1,0 +1,77 @@
+Q) Detect cycle in a directed graph
+Given a Directed Graph with V vertices (Numbered from 0 to V-1) and E edges, check whether it contains any cycle or not.
+
+// { Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+class Solution {
+  public:
+  bool checkCycle(int node, vector<int> adj[], int vis[], int dfsVis[])
+  {
+      vis[node] = 1;
+      dfsVis[node] = 1;
+      for(auto it : adj[node])
+      {
+          if(!vis[it])
+          {
+            //   will go in depth in depth in cycle
+              if(checkCycle(it, adj, vis, dfsVis))
+              return true;
+          }
+        //   if it is visited in vis[] and also in dfsVis[]
+          else if (dfsVis[it])
+          return true;
+      }
+    //   if all condition is false mark it unvisited
+      dfsVis[node] = 0;
+      return false;
+  }
+    // Function to detect cycle in a directed graph.
+    bool isCyclic(int V, vector<int> adj[]) {
+        // code here
+        int vis[V];
+        int dfsVis[V];
+        memset(vis, 0, sizeof vis);
+        memset(dfsVis, 0, sizeof dfsVis);
+        
+        for(int i = 0; i<V; i++)
+        {
+            if(!vis[i])
+            {
+                // call for dfs traversal
+                if(checkCycle(i, adj, vis, dfsVis))
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+// { Driver Code Starts.
+
+int main() {
+
+    int t;
+    cin >> t;
+    while (t--) {
+        int V, E;
+        cin >> V >> E;
+
+        vector<int> adj[V];
+
+        for (int i = 0; i < E; i++) {
+            int u, v;
+            cin >> u >> v;
+            adj[u].push_back(v);
+        }
+
+        Solution obj;
+        cout << obj.isCyclic(V, adj) << "\n";
+    }
+
+    return 0;
+}
+  // } Driver Code Ends

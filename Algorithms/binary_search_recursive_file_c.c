@@ -1,28 +1,61 @@
 #include <stdio.h>
-#include <conio.h>
+#include <stdlib.h>
+#define BYTE 10
 
-int binarySearch(int arr[], int l, int r, int x)
+int busca_binaria(FILE *arq, int inico, int fim, int num_procurado)
 {
-if (r >= l)
-{
-		int mid = l + (r - l)/2;
+    int meio, valor_testado;
+    if (fim - inico <= 0)
+        return -1;
+    meio = (fim + inico) / 2;
 
-		if (arr[mid] == x) return mid;
-		if (arr[mid] > x) return binarySearch(arr, l, mid-1, x);
+    fseek(arq, meio * BYTE, SEEK_SET);
+    fscanf(arq, "%d", &valor_testado);
 
-			return binarySearch(arr, mid+1, r, x);
+    if (num_procurado == valor_testado)
+        return meio;
+    else if (num_procurado < valor_testado)
+        return busca_binaria(arq, inico, meio, num_procurado);
+    else
+        return busca_binaria(arq, meio + 1, fim, num_procurado);
 }
 
-return -1;
-}
-
-int main(void)
+int main()
 {
-int arr[] = {2, 3, 4, 10, 40};
-int n = sizeof(arr)/ sizeof(arr[0]);
-int x = 10;
-int result = binarySearch(arr, 0, n-1, x);
-(result == -1)? printf("Element is not present in array")
-				: printf("Element is present at index %d", result);
-return 0;
+
+    int numero_buscado, final_arq;
+    char nome_arquivo[100];
+    int posi;
+
+    scanf("%s", nome_arquivo);
+    scanf("%d", &numero_buscado);
+
+    FILE *arq_d_pesquisa = fopen(nome_arquivo, "r");
+
+    if ((arq_d_pesquisa == NULL))
+    {
+        fprintf(stderr, "Algum nome de arguivo de entrada invalido");
+        return 4;
+    }
+
+    fseek(arq_d_pesquisa, 0, SEEK_END);
+
+    final_arq = ftell(arq_d_pesquisa);
+
+    fseek(arq_d_pesquisa, 0, SEEK_SET);
+
+    final_arq = final_arq / BYTE;
+
+    posi = busca_binaria(arq_d_pesquisa, 0, final_arq, numero_buscado);
+
+    if (posi == -1)
+    {
+        printf("Valor nao encontrado");
+    }
+    else
+    {
+        printf("Valor encontrado na posicao %d", posi);
+    }
+    fclose(arq_d_pesquisa);
+    return 0;
 }

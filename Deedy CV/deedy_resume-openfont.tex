@@ -1,0 +1,232 @@
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Pranjul Agarwal}{ \urlstyle{same}\href{https://pranjulagarwal.github.io/}{pranjulagarwal.github.io}| \href{https://www.facebook.com/pranjul.agarwal.129}{fb.co/pranjul}\\
+\href{mailto:pranjul.agarwal1999@gmail.com}{pranjul.agarwal1999@gmail.com} | +91-9897287436 | \href{mailto:pranjul.ecebt18@nituk.ac.in}{pranjul.ecebt18@nituk.ac.in}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{NIT UTTARAKHAND}
+\descript{B.Tech in Electronics}
+\location{2018 - Present | UK, India}
+College of Engineering \\
+\location{ Cum. GPA : 7.01 / 10.0 }
+\sectionsep
+
+\subsection{St. John's School}
+\location{Grad. May 2017 |  Roorkee, India}
+\location{XII   : 85/100}
+\location{X     : 9.8/10}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+LinkedIn    ://  \href{https://www.linkedin.com/in/pranjul-agarwal-2000/}{\bf PranjulAgarwal} \\
+Github      :// \href{https://github.com/PranjulAgarwal}{\bf PranjulAgarwal} \\
+Facebook    :// \href{https://www.facebook.com/pranjul.agarwal.129}{\bf pranjul.agarwal} \\
+Twitter     ://  \href{https://twitter.com/PranjulAgarwal6}{\bf @PranjulAgarwal6} \\
+Portfolio   ://  \href{https://pranjulagarwal.github.io/}{\bf pranjulagarwal} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 30000 lines:}
+Java \textbullet{}   C \textbullet{} Express \textbullet{} Javascript \\
+HTML-CSS \textbullet{} React.Js \textbullet{} Node.Js \textbullet{} MongoDb \\ 
+\location{Over 10000 lines:}
+Python \textbullet{} Vue.js \textbullet{} MySQL \textbullet{} Android \\
+\location{Familiar:}
+AWS \textbullet{} Flutter \textbullet{} Git \textbullet{} Django 
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\subsection{Undergraduate}
+Operating Systems \\
+Artificial Intelligence \\
+Competitive Programming \\
+JAVA Programming \\
+Database Management \\
+Object Oriented Methodology \\
+Data Structure and Algorithms \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Shopify Partners}
+\descript{| Software Development Engineer }
+\location{Feb 2021 - May 2021 | Remote}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item My task was to build interactive consumer data from multiple systems and RESTfully abstract to the UI through a Node.js backend.
+\item Build the end user web apps for Shopify clients (Small and Medium Sized Businesses). 
+\item Full-stack developer - Wrote and reviewed code for JS using React, MongoDb, Node.Js and AWS 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Indian 0}
+\descript{| Full Stack Developer }
+\location{May 2020 – Jun 2020 | Remote}
+\begin{tightemize}
+\item Worked with the Web Developer team, in Javascript and HTML-CSS to plan, to design and develop the Digital Portfolios for the customers of Indian0 (A digital portfolio management)
+\item Created a HTML and JS framework for the Portfolio Structure.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection {\href{https://redditflaird.herokuapp.com/}{Reddit - Flair Detector}}
+\descript{| Web App}
+\location{Aug 2020 – Nov 2020 }
+A Web App for Detecting Flairs in Reddit posts. Done data aquisition of reddit posts from the r/india subreddit, perform classification of the posts into 4 different flairs, later deployed the best model as a web app by utilising ML and NLP algorithms.
+\sectionsep
+
+\runsubsection {\href{https://play.google.com/store/apps/details?id=app.develepor.shivam.grocit}{Grocit}}
+\descript{| Online Grocery Shopping | Android Application}
+\location{Apr 2020 – May 2020 | Roorkee, UK}
+An android application for grocery deliveries. Made this application for local grocery store enabling to grow its business online and enabling easy deliveries for customers. Available on PlayStore. 
+\sectionsep
+
+\runsubsection {\href{https://trailerflix-netflix-clone.netlify.app/}{TrailerFLix}}
+\descript{| Web App | Netflix Clone}
+\location{May 2021 – May 2021 }
+ It is a React based web-app, a clone of Netflix style. It shows latest trending movies and shows with their trailer, also recommends you top shows and movies categorised in different genres using TMDB API.
+\sectionsep
+
+\runsubsection {\href{https://codeeditor-codepen-clone.netlify.app/}{CodeEditor}}
+\descript{| Web App | CodePen Clone}
+\location{May 2021 – May 2021 }
+ Online code-editor is a tool that resides on a remote server and is accessible via browsers.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2020	     & Nationwide top 20        & Flipakrt GRiD2.0, Hackathon\\
+2019	     & Leadership               & A.B.V.P. All India Inter NIT-Summit\\
+2017	     & 1\textsuperscript{st}    & Excellent Academics Performance, Intermediate\\
+2015	     & 1\textsuperscript{st}    & Excellent Academics Performance, Matriculation\\
+2014	     & 5\textsuperscript{th}    & Indian School Olympiad, India\\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+P. Goel, R. Behl, P. Agarwal and S. Gupta. Face Identification System, Conference: 2019, International Conference on Issues and Challenges in Intelligent Computing Techniques (ICICT).
+\nocite{*}
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}

@@ -1,6 +1,9 @@
 # Hacktoberfest-2021
 An Open Source repository to Teach people How to contribute to open sources.
 
+Bonus - Create 4 PRs and you'll get a chance to earn a t-shirt or plant a tree.
+
+
 
 ![homepage](banner.jpeg)
 

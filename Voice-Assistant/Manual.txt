@@ -1,0 +1,21 @@
+Commands You Use with my voice assistant :
+
+1) Open <website> --> Opens required website in browser 
+   Example - Open Whatsapp, Open Github, Open Facebook, etc..
+
+2) Search <word> --> Searches for the given word in browser
+   Example - Search Computer, Search Lucknow, Search Elon Musk, etc..
+
+3) Where is <location> --> Opens the location in google maps 
+   Example - Where is Paris, Where is Delhi, Where is Rio, etc..
+
+4) Translate --> Translates any HINDI or TELUGU sentence to English
+
+5) Youtube <video> --> Shows you the video you are looking for in Youtube
+   Example - Youtube faded, Youtube despacito, Youtube baby shark song, etc..
+
+6) TIME --> Tells you the current TIME
+
+7) Shutdown / Restart --> It will asks you for Confimation with yes /no to proceed
+
+8) It can answer Basic Questions like "Who are you?", "How are you?", "Good Morning", etc.. 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="hundred">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Login Form</title>
+</head>
+
+<body class="hundred">
+  <div class="container">
+    <div class="title">
+      <h1 class="speaks">Speaks</h1>
+      <p class="subtitle">Where your thoughts <span>shout</span></p>
+    </div>
+
+    <div class="login-container">
+      <div class="error">
+        <% if(error) %>
+        <p><%= error %></p>
+      </div>
+
+      <div class="success">
+        <% if(success) %>
+        <p><%= success %></p>
+      </div>
+
+      <div class="login-form">
+        <form action="" method="post">
+          <input type="text" name="username" placeholder="Username" value="<%= uname %>" required><br>
+          <input type="password" name="password" placeholder="Password" required><br>
+          <button class="login-button" type="submit">Login</button>
+        </form>
+        <button class="reg-button" onclick="window.location.href = '/users/register';">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &#169; SpeaksApp. Developed by <a href="https://github.com/anggidast" target="_blank">AnggiDast</a>.</p>
+  </footer>
+
+</body>
+
+</html>

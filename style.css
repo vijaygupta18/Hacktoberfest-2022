@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white: #f0f0f0;
+    --red: #be3144;
+    --blue: #45567d;
+    --gray: #303841;
+}
+
+.nav-list {
+    display: flex;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--red);
+    width: 100%;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-list li {
+    list-style: none;
+    margin: 14px 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--white);
+    transition: .1s ease-out;
+}
+.nav-link:hover{
+    border-bottom: 2px solid var(--white);
+    
+}
+#welcome-section {
+    background: #000;
+    height: 100vh;
+}
+
+.wel-header {
+    color: var(--white);
+    font-size: 4rem;
+}
+
+.wel-subtitle {
+    color: var(--red);
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient( 62deg, #3a3d40 0%, #181719 100%);
+}
+
+.text-center {
+    text-align: center;
+    color: var(--white);
+    max-width: 650px;
+    margin: auto;
+    border-bottom: 5px solid var(--white);
+    font-size: 2.5rem;
+    padding: 100px 10px 0 10px;
+}
+
+#projects {
+    background: var(--blue);
+    height: 100%;
+    padding: 10px 30px;
+}
+
+.project-tile {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    /* border: 2px solid; */
+    grid-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.grid-item {
+    background: var(--gray);
+    text-decoration: none;
+    /* width: 100%; */
+    color: white;
+    height: 400px;
+}
+
+.proj-image {
+    width: 100%;
+    /* height: calc(100% - 3.8rem); */
+    height: calc(100% - 75px);
+    object-fit: cover;
+}
+
+.figcaption {
+    font-size: 22px;
+    text-align: center;
+    padding: 8px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    color: var(--white);
+    font-size: 22px;
+    text-decoration: none;
+    width: 150px;
+    background: var(--gray);
+    margin: auto;
+    padding: 8px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    margin-bottom: 6rem;
+}
+
+.fa {
+    padding: 0 0 0 10px;
+}
+
+/* .fa:hover {
+    transform: translateX(0);
+    transition: transform .4s ease-in-out;
+} */
+
+.btn:hover {
+    background: var(--red);
+}
+
+#contact {
+    height: 100%;
+    background: var(--gray);
+    padding: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.cont-para {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 1px;
+    color: var(--white);
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: transform .3s ease-in-out;
+}
+
+.contact-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links a:hover {
+    transform: translateY(10px);
+}
+
+footer {
+    background: var(--gray);
+    display: flex;
+    border-top: 5px solid var(--red);
+    padding: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--white);
+}
+
+.footer-fa {
+    color: var(--white);
+    text-decoration: none;
+}

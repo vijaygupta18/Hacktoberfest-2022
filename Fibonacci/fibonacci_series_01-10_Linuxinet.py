@@ -24,3 +24,15 @@ else:
        n1 = n2
        n2 = nth
        count += 1
+
+      
+      
+#fibonacci alternative
+
+def fibb(a,b,n):
+   if(n>0):
+      print(a)
+      fibb(b,a+b,n-1)
+
+n = int(input("Enter number of terms: "))
+fibb(0,1,n)

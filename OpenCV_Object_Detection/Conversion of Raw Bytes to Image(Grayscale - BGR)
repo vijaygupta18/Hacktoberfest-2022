@@ -1,0 +1,9 @@
+import cv2
+import numpy
+import os
+randomByteArray = bytearray(os.urandom(120000))
+flatNumpyArray = numpy.array(randomByteArray)
+grayScaleImage =flatNumpyArray.reshape(300,400)
+cv2.imwrite('Gray.png',grayScaleImage) //For the grayscale image
+bgrImage =flatNumpyArray.reshape(400,100,3)
+cv2.imwrite('MyBGR.png',bgrImage)

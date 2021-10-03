@@ -47,4 +47,10 @@
     <th>✔️</th>
     
   </tr>
+  <tr>
+    <td>Nth Catalan Number</td>
+    <td>Recursion +Bottomup Dp</td>
+    <th>✔️</th>
+    
+  </tr>
 </table>

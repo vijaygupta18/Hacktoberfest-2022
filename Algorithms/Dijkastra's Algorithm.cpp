@@ -14,10 +14,8 @@ void dijkstra(int s, vector<int> & d, vector<int> & p) {
             if (!u[j] && (v == -1 || d[j] < d[v]))
                 v = j;
         }
-
         if (d[v] == INF)
             break;
-
         u[v] = true;
         for (auto edge : adj[v]) {
             int to = edge.first;

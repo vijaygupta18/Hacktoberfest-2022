@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:shimmer="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradientseriesdetailed"
+        android:orientation="vertical">
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    app:lottie_rawRes="@raw/loader"-->
+    <!--    app:lottie_loop="true"-->
+    <!--    android:id="@+id/loaderofLanding"-->
+    <!--    app:lottie_autoPlay="true"-->
+    <!--    android:layout_height="match_parent"></com.airbnb.lottie.LottieAnimationView>-->
+
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="6">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/loaderofLanding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                shimmer:duration="800">
+
+            <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="3"
+                    android:rowCount="6">
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+                <include
+                        layout="@layout/seriesviewholder"
+                        android:layout_margin="2dp" />
+
+
+
+            </GridLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </GridLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/seriesrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

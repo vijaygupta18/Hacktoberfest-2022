@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Info"
+        android:textColor="#000"
+        android:textSize="25sp"></TextView>
+
+    <EditText
+        android:id="@+id/name_informationenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:hint="Enter your name here"
+        android:inputType="textPersonName"
+     />
+
+    <Button
+        android:id="@+id/proceedbutton"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#e50914"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Proceed"></Button>
+</LinearLayout>

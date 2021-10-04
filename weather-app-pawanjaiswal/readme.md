@@ -1,0 +1,1 @@
+Weatherapp is a simple weather forecast app, which uses APIs from https://openweathermap.org/api to fetch the weather information district wise in India

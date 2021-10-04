@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="images/logo.png" type="images/png">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <link rel="stylesheet" href="css/section1.css">
+    {{!-- <link rel="stylesheet/less" type="text/css" href="section1.css" /> --}}
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    
+    <!-- Navbar Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+{{!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script> --}}
+    
+    <title>Weather</title>
+</head>
+<body>
+    {{>navbar}}
+    {{>section1}}
+    <h1 class="ml12">A new production</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+        var textWrapper = document.querySelector('.ml12');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml12 .letter',
+            translateX: [40,0],
+            translateZ: 0,
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml12 .letter',
+            translateX: [0,-30],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        });
+    </script>
+</body>
+</html>

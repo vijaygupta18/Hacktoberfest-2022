@@ -1,0 +1,109 @@
+.navbar {
+  font-family: 'Mogra', 'cursive';
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-image: linear-gradient(rgb(1, 112, 168), #7DD5E3);
+  padding: 8px 16px;
+}
+
+.brand-title {
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+}
+
+a.custom-card,
+a.custom-card:hover {
+  color: inherit;
+}
+
+.fa {
+  margin-right: 6px;
+}
+
+.fas {
+  margin-right: 6px;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 0.1rem 1rem;
+}
+
+.navbar-links li:hover {
+  background-color: rgb(82, 151, 156);
+  border-radius: 10px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .toggle-button {
+      display: flex;
+  }
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+  .navbar-links li a {
+      color: rgb(0, 0, 0);
+      padding: 1rem;
+  }
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+  .navbar-links ul li {
+      text-align: center;
+  }
+  .navbar-links ul li a {
+      padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+      display: flex;
+  }
+}

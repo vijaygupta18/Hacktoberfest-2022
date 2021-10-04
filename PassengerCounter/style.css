@@ -1,0 +1,44 @@
+h1 {
+  padding-left: 40%;
+  align-content: center;
+  font-family: sans-serif;
+  background-color: lawngreen;
+ margin:20px;
+}
+#count-el{
+    padding-left: 50%;
+    font-size: 30px;
+    align-content: center;
+}
+button{
+    font-size: 20px;
+    font-style:unset;
+    font-family: monospace;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    outline: black 10px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+#increment-btn{
+    color:whitesmoke;
+    background-color: rgb(11, 102, 138);  
+}
+#decrement-btn{
+    color:whitesmoke;
+    background-color: rgb(175, 50, 50);  
+}
+#save-btn{
+    color:whitesmoke;
+    background-color: rgb(116, 158, 31);
+}
+
+#save-el{
+    align-content: center;
+    margin-left: 50px;
+}

@@ -32,6 +32,7 @@ void main()
             }
         }
     }
+    
     printf("\nSorted Array:\n");
     printf("\n");
     for (i = 0; i < size; i++)

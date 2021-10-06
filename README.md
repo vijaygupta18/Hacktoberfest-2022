@@ -9,7 +9,7 @@ Bonus - Create 4 PRs and you'll get a chance to earn a t-shirt or plant a tree.
 
 ## This repository is for collecting the different projects made by people who wants to contribute in open source.
 
-        ## - Do give a star if you liked this repo.
+        ## - Do follow and give a star if you liked this repo.
 
 
 ### Note - Your Project Must be valid.

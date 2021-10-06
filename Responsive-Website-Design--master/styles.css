@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #444444;
+	font-family: 'Allura', cursive;
+	text-transform: uppercase;
+	font-size: 38px;
+	word-spacing: 25px;
+	letter-spacing: 5px;
+}
+
+p{
+	margin-bottom: 15px;
+	font-size: 19px;
+	line-height: 20px;
+	color: #a9a9a9;
+	font-family:Arial, Helvetica, sans-serif ;
+	word-spacing: 4px;
+}
+
+.btn a {
+    width: 180px;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #fb2274;
+    color: #fb2274;
+    display: block;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+.main_container{
+	position: relative;
+}
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo a{
+	font-family: 'Allura', cursive;
+	font-size: 32px;
+	color: #fb2274;
+}
+
+.navbar_items ul{
+	display: flex;
+}
+
+.navbar_items ul li{
+	margin: 0 10px;
+}
+
+.navbar_items ul li a{
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* banner_image */
+.banner_image{
+	background: url('simon-weisser-phS37wg8cQg-unsplash.jpg') no-repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+	font-size: xx-large;
+	;
+}
+
+.rainbow{
+	background-color:white;
+	border-radius: 4px;  
+	color:black;
+	cursor: pointer;
+	padding: 15px 15px;
+	
+      }
+
+.rainbow-5:hover{
+	background-image:     linear-gradient(
+	   to right, 
+	   #E7484F,
+	   #E7484F 16.65%,
+	   #F68B1D 16.65%,
+	   #F68B1D 33.3%,
+	   #FCED00 33.3%,
+	   #FCED00 49.95%,
+	   #009E4F 49.95%,
+	   #009E4F 66.6%,
+	   #00AAC3 66.6%,
+	   #00AAC3 83.25%,
+	   #732982 83.25%,
+	   #732982 100%,
+	   #E7484F 100%
+	  
+	  
+	  
+	 );
+       animation:slidebg 2s linear infinite;
+     }
+     
+     
+     @keyframes slidebg {
+       to {
+	 background-position:20vw;
+       }
+     }
+     
+     .follow{
+       margin-top: 40px;
+     }
+     
+     .follow a{
+       color:white;
+       padding: 8px 16px;
+       text-decoration: none;
+     }
+    
+
+/* About */
+.about,
+.services,
+.contactus,
+.ourteam{
+	text-align: center;
+	padding: 7% 10%;
+	
+}
+
+
+
+/* Services */
+.services{
+	background: #f5f5f5;
+}
+
+.diff_services {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.diff_services .diff_services_item {
+    width: 30%;
+}
+
+.diff_services .diff_services_item img {
+    width: 100%;
+    height: 70%;
+    margin-bottom: 25px;
+}
+
+.diff_services .diff_services_item h3 {
+    color: #fb2274;
+    margin-bottom: 15px;
+}
+
+/* Contact Us */
+.form_input{
+	margin-bottom: 15px;
+}
+
+.form_input input[type="text"]{
+	width: 350px;
+	padding: 15px 23px;
+	border: 2px solid #ccc;
+}
+
+.form_input textarea{
+	width: 350px;
+	padding: 12px 30px;
+	height: 80px;
+	resize: none;
+	border: 2px solid #ccc;
+}
+
+/* our team */
+.ourteam{
+	background: #f5f5f5;
+}
+
+.ourteam_wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+.ourteam_wrapper .team{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ourteam_wrapper .team-1.team{
+	margin-bottom: 25px;
+}
+
+.ourteam_wrapper .team_members{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+.ourteam_wrapper .team_members img{
+	display: block;
+	width: 100%;
+	
+	height: 70%;
+	transition: all 0.4s ease;
+}
+
+
+
+.ourteam_wrapper .team_members:hover img{
+	transform: scale(1.1);
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	
+      }
+      
+      .container:hover .overlay {
+	opacity: 1;
+      }
+      
+      .text {
+	color:white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+      }
+
+     
+      
+
+/* footer */
+.footer{
+	width: 100%;
+	text-align: center;
+	background: #444444;
+	padding: 20px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+
+
+@media (max-width: 720px){
+
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar_items ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar_items ul li{
+		margin-bottom:5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+
+}
+
+
+/* arrow */
+.arrow{
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	background: #fb2274;
+	border-radius: 50%;
+	display: none;
+}
+
+.arrow img{
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+}

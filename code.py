@@ -1,49 +1,74 @@
-#Password Generator in Python --by Deepanshu Mittal
-#python 3
+#BILL GENERATOR IN MS-EXCEL USING OPENPYXL LIBRARY OF PYTHON
+#Coded by Deepanshu Mittal
+#python3
 
-#import libraries: random and string
-import random
-import string
+import openpyxl             #install openpyxl using code: pip install openpyxl
+from datetime import datetime       #import datetime module for time at the time of billing
+from openpyxl.styles import Alignment       #just to give a proper alignment to the data in MS Excel
 
-print("PASSWORD GENERATOR IN PYTHON")
+wb = openpyxl.Workbook()     #create a new excel file 
+sheet = wb.active
 
-#Input the desired length of the password from the user
-len_of_pass = int(input("\nEnter the length of the paasword: "))
+today=datetime.now()        #time during billing
 
-#Form the strings containing specific type of character using 'string' module
-low_char = string.ascii_lowercase
-up_char = string.ascii_uppercase
-numbers = string.digits
-symbols = string.punctuation
+sheet.merge_cells('A1:E1')
+sheet['A1']="BILL GENERATOR"
+sheet['A1'].alignment = Alignment(horizontal='center')
 
-#Input the types of characters user want in the password
-types_input = input("\nEnter\n 1- For using lower case alphabets in the password\n 2- For using upper case letters in the password\n 3- For using digits in password\n 4- For using symbols in the password\n Enter space separated numbers according to your need in the password\n")
-types= types_input.split(' ')
+sheet.merge_cells('A2:B2')
+sheet.merge_cells('D2:E2')
+sheet['A2']="Deepanshu Mittal"          #Customer name can be be here
+sheet['A2'].alignment = Alignment(horizontal='left')
+sheet['D2']=today
+sheet['D2'].alignment = Alignment(horizontal='right')
 
-#Form a string containing all required types of characters only
-string=""
-for i in types:
-    if(i=='1'):
-        string += low_char
-    elif(i=='2'):
-        string += up_char
-    elif(i=='3'):
-        string += numbers
-    elif(i=='4'):
-        string += symbols
+#Give headings of the Bill Table
+sheet['A4']="#"
+sheet['B4']="Item"
+sheet['C4']="Quantity"
+sheet['D4']="Price per 1 unit"
+sheet['E4']="Amount"
+
+#----------IMPORTANT---------------------------------
+#Format for file containing list of items should be:
+
+# Quantity | Item Name | Price per 1 unit
+
+#------------------------------------------------------
+
+fh=open("list.txt","r+")                #open file to read the list of items
+data=fh.readlines()
+
+done={}                 #to keep track of marked items in the bill
+i=1
+p=i
+total_amount=0          #to sum up the total bill
+for line in data:
+    line = line.strip()
+    item = line.split('|')
+    qty = float(item[0].strip())
+    name = item[1].strip()
+    price = float(item[2].strip())
+    if(done.get(name,0) == 0):
+        #A new item is added to the bill
+        sheet.cell(row=i+4, column=1).value = i
+        sheet.cell(row=i+4, column=2).value = name
+        sheet.cell(row=i+4, column=3).value = qty
+        sheet.cell(row=i+4, column=4).value = price
+        sheet.cell(row=i+4, column=5).value = qty*price
+        done[name] = i+4
+        total_amount += qty*price
+        i += 1
+        p=i
     else:
-        print("Invalid inputs")
-        exit()
+        #Previous item appears again in the list so it is updated in the bill
+        sheet.cell(row=done[name], column=3).value += qty
+        sheet.cell(row=done[name], column=5).value += qty*price
+        total_amount += qty*price
 
-#Length of string containing all required types of characters
-len_of_str = len(string)
+#Finally the total amount is revealed
+sheet.cell(row=p+4, column=4).value = "TOTAL"
+sheet.cell(row=p+4, column=5).value = total_amount
 
-#Password string initialised
-password = ""
-
-#Using 'randrange' function of 'random' module we will generate a random password using characters from the string
-for i in range(len_of_pass):
-    password += string[random.randrange(len_of_str)]
-
-#Print the generated password
-print("\nPassword Generated: ",password)
+#save at last the workbook
+wb.save(filename='Bill.xlsx')

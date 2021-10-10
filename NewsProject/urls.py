@@ -19,4 +19,6 @@ from newsweb import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
+    url(r'^serviceprovided.html/$', views.service),
+    url(r'^aboutus.html/$', views.about),
 ]

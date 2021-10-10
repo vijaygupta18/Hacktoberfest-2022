@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Card</title>
+    <link rel="stylesheet"  href="D:\resume\style2.css"/>
+</head>
+<body>
+    <script type="text/javascript" src="box.js"></script>
+    <div class="main center">
+        <div class="box center">
+            <img src="" alt="">
+
+        </div>
+        <p class="user_name">Your Name</p>
+        <p class="skill">Job Profile</p>
+    </div>
+    <div class="arr_container center ">
+        <i class="fas fa-arrow-right"></i>
+    </div>
+    <div class="left_container off">
+        <p>
+            Skills
+        </p>
+        <div class="skills">
+            <div>Skill1</div>
+            <div>Skill2</div>
+            <div>Skill3</div>
+        </div>
+    <div class="icons">
+        <i class="fab fa-linkedin"></i>
+    </div> 
+    <div class="cancel center">
+        <i class="fas fa-times"></i>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

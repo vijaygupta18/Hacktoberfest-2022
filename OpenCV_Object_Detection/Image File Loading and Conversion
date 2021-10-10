@@ -1,0 +1,11 @@
+import cv2
+import numpy
+#Create a black image with 3*3 = 9 Pixels
+img= numpy.zeros((3,3),dtype = numpy.uint8)
+print(img) #GrayScale Image  #0_255_color_range
+img = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+print(img) #A color Image
+print(img.shape)
+img= cv2.imread('Capture.png')
+cv2.imwrite('Capture.jpg',img)
+print(img.shape)

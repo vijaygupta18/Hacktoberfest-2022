@@ -1,0 +1,23 @@
+<%- include('partials/header')  -%>
+
+<title>Users</title>
+</head>
+
+<body>
+  <%- include('partials/nav')  -%>
+
+  <div class="center add-top">
+    <h1>Speaker(s) List</h1>
+
+    <% if(data.length == 0) { %>
+    <br>
+    <h2>User not found!</h2>
+    <% } %>
+    <% data.forEach(el => { %>
+    <h2 class="result"><a class="uname" href="/posts?username=<%= el.username %> "><%= el.username %></a></h2>
+    <% }) %>
+  </div>
+
+</body>
+
+</html>

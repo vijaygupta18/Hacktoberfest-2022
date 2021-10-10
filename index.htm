@@ -1,0 +1,451 @@
+<!-- Index.html started from here --->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal PortFolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resp.css">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="nav-list">
+            <li>
+                <a class="nav-link" href="#welcome-section">About</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#projects">Work</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- navbar ended here -->
+
+    <section id="welcome-section">
+        <h1 class="wel-header"> Hey I am LaRaib</h1>
+        <p class="wel-subtitle">a web developer</p>
+    </section>
+
+    <!-- welcome-section ended here -->
+    <section id="projects">
+        <h1 class="text-center">These are some of my projects</h1>
+        <div class="project-tile">
+            <a href="#" class="grid-item">
+                <img class="proj-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+                    alt="">
+                <p class="figcaption">
+                    <span class="">Tribute Page</span>
+                </p>
+            </a>
+
+            <a href="#" class="grid-item">
+                <img class="proj-image"
+                    src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="">
+                <p class="figcaption">
+                    <span class="">Random Quote Machine</span>
+                </p>
+            </a>
+
+            <a href="#" class="grid-item">
+                <img class="proj-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="">
+                <p class="figcaption">
+                    <span class="">JavaScript Calculator</span>
+                </p>
+            </a>
+            <a href="#" class="grid-item">
+                <img class="proj-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="">
+                <p class="figcaption">
+                    <span class="">Map Data Across The Globe</span>
+                </p>
+            </a>
+
+            <a href="#" class="grid-item">
+                <img class="proj-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="">
+                <p class="figcaption">
+                    <span class="">Wikipedia Viewer</span>
+                </p>
+            </a>
+
+            <a href="#" class="grid-item">
+                <img class="proj-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+                    alt="">
+                <p class="figcaption">
+                    <span class="">Tic Tac Toe Game</span>
+                </p>
+            </a>
+        </div>
+        <div class="btn-div">
+            <a href="#" class="btn">Show all
+                <i class="fa fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="contact-header">
+            <h1 class="contact-text">Let's work together...</h1>
+            <p class="cont-para">How do you take your coffee?</p>
+        </div>
+        <div class="contact-links">
+            <a href="#">
+                <i class="fa fa-facebook-square"></i>
+                Facebook
+            </a>
+            <a id="profile-link" target="_blank" href="https://github.com/codewithgulam">
+                <i class="fa fa-github"></i>
+                Github
+            </a>
+            <a href="#">
+                <i class="fa fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="#">
+                <i class="fa fa-at"></i>
+                Send a mail
+            </a>
+            <a href="#">
+                <i class="fa fa-mobile-alt"></i>
+                Call me
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>
+            **This is just a fake portfolio. All the projects and contact details given are not real.
+        </p>
+        <p>
+            © Created for
+            <a class="footer-fa" href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i
+                    class="fa fa-free-code-camp"></i></a>
+        </p>
+    </footer>
+</body>
+
+</html>
+
+
+<style>
+
+// stylesheet started from here
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100&display=swap');
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white: #f0f0f0;
+    --red: #be3144;
+    --blue: #45567d;
+    --gray: #303841;
+}
+
+.nav-list {
+    display: flex;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background: var(--red);
+    width: 100%;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.nav-list li {
+    list-style: none;
+    margin: 14px 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--white);
+    transition: .1s ease-out;
+}
+.nav-link:hover{
+    border-bottom: 2px solid var(--white);
+    
+}
+#welcome-section {
+    background: #000;
+    height: 100vh;
+}
+
+.wel-header {
+    color: var(--white);
+    font-size: 4rem;
+}
+
+.wel-subtitle {
+    color: var(--red);
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient( 62deg, #3a3d40 0%, #181719 100%);
+}
+
+.text-center {
+    text-align: center;
+    color: var(--white);
+    max-width: 650px;
+    margin: auto;
+    border-bottom: 5px solid var(--white);
+    font-size: 2.5rem;
+    padding: 100px 10px 0 10px;
+}
+
+#projects {
+    background: var(--blue);
+    height: 100%;
+    padding: 10px 30px;
+}
+
+.project-tile {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    /* border: 2px solid; */
+    grid-gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.grid-item {
+    background: var(--gray);
+    text-decoration: none;
+    /* width: 100%; */
+    color: white;
+    height: 400px;
+}
+
+.proj-image {
+    width: 100%;
+    /* height: calc(100% - 3.8rem); */
+    height: calc(100% - 75px);
+    object-fit: cover;
+}
+
+.figcaption {
+    font-size: 22px;
+    text-align: center;
+    padding: 8px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    color: var(--white);
+    font-size: 22px;
+    text-decoration: none;
+    width: 150px;
+    background: var(--gray);
+    margin: auto;
+    padding: 8px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    margin-bottom: 6rem;
+}
+
+.fa {
+    padding: 0 0 0 10px;
+}
+
+/* .fa:hover {
+    transform: translateX(0);
+    transition: transform .4s ease-in-out;
+} */
+
+.btn:hover {
+    background: var(--red);
+}
+
+#contact {
+    height: 100%;
+    background: var(--gray);
+    padding: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.cont-para {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+    word-spacing: 1px;
+    color: var(--white);
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    transition: transform .3s ease-in-out;
+}
+
+.contact-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links a:hover {
+    transform: translateY(10px);
+}
+
+footer {
+    background: var(--gray);
+    display: flex;
+    border-top: 5px solid var(--red);
+    padding: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--white);
+}
+
+.footer-fa {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+
+
+
+// responsive stylesheet started from here
+
+
+
+@media (max-width:988px) {
+    .contact-links {
+        flex-direction: column;
+    }
+    .contact-text {
+        font-size: 3rem;
+    }
+    #contact {
+        padding: 50px;
+    }
+}
+
+@media (max-width:520px) {
+    #navbar {
+        justify-content: center;
+        margin-right: 0;
+    }
+    #project-tile {
+        grid-template-columns: 1fr;
+    }
+    .wel-header {
+        font-size: 3rem;
+    }
+    .wel-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:395px) {
+    .wel-header {
+        font-size: 2rem;
+    }
+    #projects {
+        padding: 0;
+        /* padding: 0 5px; */
+    }
+    .nav-list li {
+        margin: 11px;
+    }
+    .grid-item {
+        margin: 10px;
+    }
+    .project-tile {
+        grid-gap: 1rem;
+    }
+    .text-center {
+        font-size: 2rem;
+        padding: 70px 30px  0 30px;
+        border-bottom: 2px solid var(--white);
+    }
+    .figcaption {
+        font-size: 19px;
+    }
+    .btn{
+        margin-bottom: 0px;
+        /* display: block; */
+    }
+    .btn-div{
+        /* width: 100%; */
+        height: 100%;
+        margin: 50px;
+    }
+    body{
+        background: var(--blue);
+    }
+    footer{
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    footer p{
+        margin: 20px;
+    }
+}
+
+</style>
+
+
+
+
+
+

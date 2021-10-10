@@ -1,0 +1,74 @@
+body{
+    #background-color: hsl(330,100%,5%);
+    background:url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+    color: grey;
+  }
+  #title{
+    width: 400px;
+    height: 100px;
+    max-width: 100%;
+    margin: 2rem auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family:tangerine;
+    border-width:5px;
+    border-image:linear-gradient(45deg, orange, white,rgb(10, 254, 55))1;
+    border-style:solid;
+  }
+  h1{
+    color: #993366
+  }
+  #image{
+    width:300px;
+    height:auto;
+    display:block;
+  }
+  #image-caption{
+      width:300px;
+  }
+  #tribute-info{
+    
+  }
+  .thin-red-border {
+      border-color: linear-gradient(to right, red, purple);
+      border-width: 5px;
+      border-style: solid;
+      border-radius:20;
+      border-image:linear-gradient(45deg, orange, white,rgb(10, 254, 55))1;
+    }
+  .box {
+    width: 400px;
+    height: 200px;
+    max-width: 100%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  .divider {
+    border-left: 6px solid red;
+    border-bottom: 2px outset red;
+    border-radius: 5px;
+    background-color: grey
+  }
+  .caption{
+    font-size:20px;
+    font-family:tangerine;
+    height:40px;
+    margin:20px;
+    padding:90px;
+    align-items:center;
+    justify-content:center;
+    
+  } 
+  .list{
+    color:red;
+  }
+  h1:hover{ 
+    background-color: #ff82a9;
+    width 50px;
+    height:30px;
+  }

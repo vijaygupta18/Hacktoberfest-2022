@@ -1,0 +1,43 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111010 ;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano {
+  display: flex;
+}
+
+.key {
+  height: calc(var(--width) * 3.5);
+  width: var(--width);
+}
+
+.white {
+  --width: 90px;
+  background-color: white;
+  border: 2.5px solid rgb(22, 21, 21);
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 50px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}

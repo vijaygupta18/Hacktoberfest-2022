@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativelyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/yellow_gradient"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <RelativeLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+        <TextView
+                android:id="@+id/login_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/billabong"
+                android:layout_marginTop="40dp"
+                android:text="Sasta Netflix"
+                android:padding="20dp"
+                android:textColor="#fff"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+
+
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_title"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp">
+
+                <TextView
+                        android:id="@+id/registration_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="Login"
+                        android:textColor="#fff"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+                <EditText
+                        android:id="@+id/text_email_login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/edittext"
+                        android:hint="Email/Username"
+                        android:inputType="textEmailAddress"
+                        android:padding="20dp"
+                        android:singleLine="true" />
+
+
+                <EditText
+                        android:id="@+id/edit_text_password_login"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/edittext"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:padding="20dp"
+                        android:singleLine="true" />
+
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                    <Button
+                            android:id="@+id/button_sign_in"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="22dp"
+                            android:background="@drawable/edittext"
+                            android:ems="10"
+                            android:text="Log in"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+
+                    <TextView
+                            android:id="@+id/text_view_register"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:text="Don't have an account. Register Here" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+

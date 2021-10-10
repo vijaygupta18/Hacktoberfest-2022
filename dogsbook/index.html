@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <title>DogsBook</title>
+</head>
+<body onload="randdog()">
+    <header fixed-top>
+        <img onclick="showecon('home')" class="logo" src="img/logo.png" alt="Logo"/>
+        <nav>
+            <ul>
+                <li class="hbtn" onclick="showecon('home')"><a href="#home">Home</a></li>
+                <li class="rbtn" onclick="showecon('random')"><a href="#random">Random</a></li>
+                <li id="serbtn"><a href="#">Search</a></li>
+                <li class="abtn" onclick="showecon('id')"><a href="#id">About</a></li>
+            </ul>
+            <button class="ctnbtn" onclick="showecon('contact')"><a href="#contact">Contact Us</a></button>
+        </nav>
+    </header>
+    <div class="econtainer" id="econtainer">
+        <section class="home" id='home'>
+            <img class="illus" src="img/illus.svg" alt="">
+            <h1>Hello Hoomans !</h1>
+            <p>Welcome to <b>DOGSBOOK</b>, here you can know all about me and my brotherins. Also, you may fall in love with one of us and decide to bring us home, in anyway thank you.
+            </p>
+        </section>
+        <section class="random" id="random">
+            <h1 style="padding:1rem 1rem">Randoms</h1>
+            <hr>
+            <div class="randimg">
+                <div class="card">
+                    <img id = "d1" src=" " alt="Avatar">
+                    <div class="cardcontainer">
+                      <h2 id="dh1"></h2> 
+                      <p id="ph1.1"></p> 
+                      <p id="ph1.2"></p> 
+                      <p id="ph1.3"></p> 
+                    </div>
+                  </div>
+                <div class="card">
+                    <img id="d2" src=" " alt="Avatar">
+                    <div class="cardcontainer">
+                      <h2 id="dh2"></h2> 
+                      <p id='ph2.1'></p> 
+                      <p id='ph2.2'></p>
+                      <p id='ph2.3'></p>
+                    </div>
+                  </div>
+                <div class="card mobile">
+                    <img id="d3" src=" " alt="Avatar">
+                    <div class="cardcontainer">
+                      <h2 id="dh3"></h2> 
+                      <p id="ph3.1"></p> 
+                      <p id="ph3.2"></p>
+                      <p id="ph3.3"></p>
+                    </div>
+                  </div>    
+            </div>
+        </section>
+        <section class="about" id="id">
+          <h1>About</h1>
+          <hr>
+            <div class="abtcont" id="abtcont">
+              <img class="dp" src="img/dp1.png" alt="dog face">
+              <p>We are group of persons who are really fond of dogs nad there are literally no websites that can give you a complete information about dog and dog breeds.
+                Hence we created this directory website to solvw this exact problem, this website is in it's initial versions, many things may be broken or unusable so, I request you to bear with us and if possible write to us, even if you just want to know something feel free to reach to us. Thank You for taking your time and visiting. </p>
+              <img class="dp" src="img/dp2.png" alt="dog face">
+            </div>
+            <div class="abticn" id="abticn">
+              <i class="fab fa-twitter"><a class="link" href="">Twitter</a></i>
+              <i class="fab fa-facebook"><a class="link" href="">Facebook</a></i>
+              <i class="fab fa-instagram"><a class="link" href="">Instagram</a></i>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+          <div class="contactcontainer">
+            <h1>Contact Us</h1>
+            <hr>
+            <div class="contact-box">
+              <div class="left"></div>
+              <div class="right">
+                <h2>Contact Us</h2>
+                <input type="text" class="field" placeholder="Your Name">
+                <input type="text" class="field" placeholder="Your Email">
+                <input type="text" class="field" placeholder="Phone">
+                <textarea placeholder="Message" class="field"></textarea>
+                <button class="btn">Send</button>
+              </div>
+            </div>
+            <h3 class="footer">Made with Love for Dogs ❤</h3>
+          </div>
+        </section>
+      </div>
+      <section class="search" id="search">
+        <div class="s130">
+          <form id="form" >
+            <div class="inner-form">
+              <div class="input-field first-wrap">
+                <div class="svg-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                  </svg>
+                </div>
+                <input id="searchtxt" type="text" placeholder="Enter the breed here..." />
+              </div>
+              <div class="input-field second-wrap">
+                <button class="btn-search" type="button" onclick="getBreeds()">SEARCH</button>
+              </div>
+        </form>
+      </section>
+    <!-- Script-->
+    <script src="script.js"></script>
+</body>
+</html>

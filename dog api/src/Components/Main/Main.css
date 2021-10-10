@@ -1,0 +1,37 @@
+.selection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 150px;
+  font-size: 22px;
+  gap: 10px;
+}
+.selection_item {
+  margin: 20px 0;
+  display: flex;
+
+  align-items: center;
+  gap: 5px;
+}
+select {
+  height: 25px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  
+}
+option {
+  font-weight: bold;
+}
+.image_container{
+  border: 2px solid #111;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  
+}

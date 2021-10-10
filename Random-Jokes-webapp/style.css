@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #ff8ece;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 85vh;
+    background: url(/Random-Jokes-webapp/gif/robot_dribbble.gif) no-repeat;
+    background-position: left;
+}
+
+.show-joke-container {
+    margin: .5rem 2rem;
+    padding: .5rem 2rem;
+    background: mediumblue;
+    opacity: .8;
+}
+
+#show-joke {
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+button {
+    margin: 1.5rem auto;
+    padding: 10px 25px;
+    border-radius: 3px;
+    display: block;
+    font-size: 1.3rem;
+    color:white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 900;
+    background-color: #FF3482;
+    border: 2px solid #FF3482;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px 2px black;
+}
+
+button:hover {
+    filter: brightness(95%);
+}

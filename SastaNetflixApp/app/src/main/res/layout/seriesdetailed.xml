@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:shimmer="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--    <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--            android:id="@+id/loaderseriesdetailed"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:orientation="vertical"-->
+<!--            shimmer:duration="800">-->
+
+<!--        <include layout="@layout/seriesdetailedshimmering"></include>-->
+<!--    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+    <androidx.core.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:shimmer="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <!--        <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:id="@+id/loaderseriesdetailed"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                app:lottie_autoPlay="true"-->
+            <!--                app:lottie_loop="true"-->
+            <!--                app:lottie_rawRes="@raw/loader"></com.airbnb.lottie.LottieAnimationView>-->
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:id="@+id/seriesbackdrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="210dp"
+                            android:alpha=".8"
+                            android:scaleType="fitXY"></ImageView>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="7dp"
+                                android:layout_marginLeft="10dp"
+                                app:cardElevation="100dp">
+
+                            <ImageView
+                                    android:id="@+id/seriesposterpath"
+                                    android:layout_width="100dp"
+                                    android:layout_height="150dp"
+                                    android:elevation="100dp"
+                                    android:scaleType="fitXY"></ImageView>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                <TextView
+                                        android:id="@+id/seriesname"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/robotobold"
+                                        android:gravity="center"
+                                        android:text="Peaky Blinders"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="30dp"></TextView>
+
+                                <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    <RatingBar
+                                            android:id="@+id/seriesrating"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:numStars="5"></RatingBar>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!--                    <LinearLayout-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="wrap_content"-->
+                            <!--                            android:orientation="horizontal">-->
+
+                            <!--                        <com.google.android.material.chip.Chip-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="match_parent"-->
+                            <!--                                android:layout_margin="5dp"-->
+                            <!--                                android:text="Drama"></com.google.android.material.chip.Chip>-->
+
+                            <!--                        <com.google.android.material.chip.Chip-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="match_parent"-->
+                            <!--                                android:layout_margin="5dp"-->
+                            <!--                                android:text="Crime"></com.google.android.material.chip.Chip>l-->
+
+
+                            <!--                    </LinearLayout>-->
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:background="#FFFFFF"
+                        android:padding="3dp">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/plus"></ImageView>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/checkall"></ImageView>
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/seriesummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:text="A gangster family epic set in 1919 Birmingham, England and centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby, who means to move up in the world."
+                        android:textColor="#000"
+                        android:textSize="15dp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/seriesdetailedrecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1a2a6c;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+div.inputBox {
+  position: relative;
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div.inputBox h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+div.inputBox h5 {
+  text-transform: uppercase;
+  color: #fff;
+  font-style: italic;
+}
+
+div.inputBox .inputBox i {
+  position: absolute;
+}
+
+div.inputBox .inputBox {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+div.inputBox .icon {
+  padding: 10px;
+  color: #fff;
+  font-size: 34px;
+  min-width: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+
+div.inputBox .inputBox {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+div.inputBox input {
+  position: relative;
+  width: 60%;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: white;
+  margin: 15px 0 20px;
+  padding: 0 20px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: -4px -4px 10px #ffef0e, inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset 4px 4px 10px white, 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+div.inputBox input::placeholder {
+  letter-spacing: 2px;
+}
+
+div.inputBox div#btn {
+  position: relative;
+  background-color: #01a501;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+div.inputBox h4 {
+  color: #05f7ff;
+}
+
+div.inputBox div#btn:active {
+  background-color: #9c27b0;
+}

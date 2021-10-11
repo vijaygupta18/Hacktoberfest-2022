@@ -1,0 +1,32 @@
+<%- include('partials/header')  -%>
+
+<title>Favorite Posts</title>
+</head>
+
+<body>
+  <%- include('partials/nav')  -%>
+
+  <h1 class="center add-top">Your Favorite Posts</h1>
+
+  <% if(data.length == 0) { %>
+  <h3 class="center">You don't have any favorite post yet.</h3>
+  <% } %>
+
+  <div class="posts">
+    <% data.forEach(el => { %>
+    <div class="post">
+      <img class="image" src="<%= el.Post.img_url %>" height="200" alt="">
+      <div class="desc">
+        <h3><a class="uname" href="/posts?username=<%= el.Post.User.username %> "><%= el.Post.User.username %></a></h3>
+        <a href="/favorites/delete/<%= el.id %>"><img class="icon" src="/stared.svg" width="18" alt="fav-icon" title="Remove from favorites" onclick="return confirm('Are you sure you want to delete this post from favorites?')"></a>
+        <h4><%= el.Post.title %></h4>
+        <p><%= el.Post.description %></p>
+      </div>
+    </div>
+    <% }) %>
+
+  </div>
+
+</body>
+
+</html>

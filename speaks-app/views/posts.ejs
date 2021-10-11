@@ -1,0 +1,57 @@
+<%- include('partials/header')  -%>
+
+<title>Speaks</title>
+</head>
+
+<body>
+  <%- include('partials/nav')  -%>
+  <div class="center add-top">
+    <button class="new-post" onclick="window.location.href = '/posts/add';">Create New Post</button>
+  </div>
+
+  <div class="posts">
+
+    <% if(data) { %>
+
+    <% data.forEach(el => { %>
+    <div class="post">
+      <img class="image" src="<%= el.img_url %>" height="200" alt="">
+      <div class="desc">
+        <h3><a class="uname" href="/posts?username=<%= el.User.username %> "><%= el.User.username %></a></h3>
+        <% if(id == el.UserId || id == 2) { %>
+        <div class="action">
+          <a class="edit" href="/posts/edit/<%= el.id %>"><img class="icon" src="/edit.svg" width="18" alt="edit-icon" title="Edit this post"></a>
+          <a href="/posts/delete/<%= el.id %>" onclick="return confirm('Are you sure you want to delete this post?')"><img class="icon" src="/garbage.svg" width="18" alt="delete-icon" title="Delete this post"></a>
+
+          <% const favorite = el.Favorites.find(fav => fav.UserId == id) || null%>
+
+          <% if(favorite) { %>
+          <a href="/favorites/delete/<%= favorite.id %>?loc=posts"><img class="icon" src="/stared.svg" width="18" alt="fav-icon" title="Remove from favorites"></a>
+          <% } else { %>
+          <a href="/posts/favorite/<%= el.id %>"><img class="icon" src="/star.svg" width="18" alt="fav-icon" title="Favorite this post"></a>
+          <% } %>
+
+          <% } else { %>
+          <div class="single-action">
+            <% const favorite = el.Favorites.find(fav => fav.UserId == id) || null%>
+            <% if(favorite) { %>
+            <a href="/favorites/delete/<%= favorite.id %>?loc=posts"><img class="icon" src="/stared.svg" width="18" alt="fav-icon" title="Remove from favorites"></a>
+            <% } else { %>
+            <a href="/posts/favorite/<%= el.id %>"><img class="icon" src="/star.svg" width="18" alt="fav-icon" title="Favorite this post"></a>
+            <% } %>
+
+            <% }%>
+          </div>
+          <h4><%= el.title %></h4>
+          <p><%= el.description %></p>
+
+        </div>
+      </div>
+      <% }) %>
+
+      <% } %>
+    </div>
+
+</body>
+
+</html>

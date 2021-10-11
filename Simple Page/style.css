@@ -1,0 +1,100 @@
+*{
+   padding: 0;
+   margin: 0; 
+   box-sizing: border-box;
+}
+.hero{
+    height: 100vh; 
+    width: 100%;
+    background-image: url(./images/image3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{
+    color: #f9004d;
+}
+.nav{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: #f9004d;
+}
+
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .6s;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+}
+h1{
+    color: white;
+    margin: 20px 0 20px;
+    font-size: 70px;
+}
+h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: rgb(209, 202, 202);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.newsletter form{
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+.newsletter form input:first-child {
+  width: 100%;
+  display: inline-block;
+  padding: 14px 130px 14px 15px;
+  border: 2px solid #f9004d;
+  border-radius: 30px;
+}
+.newsletter form input:last-child {
+    position: absolute;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: #f9004d;
+    color: white;
+    top: 6px;
+    right: 6px;
+}
+

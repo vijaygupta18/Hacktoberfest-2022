@@ -1,0 +1,53 @@
+
+@keyframes anmi {
+    /*from {
+        background-color: wheat;
+    }
+    to {
+        background-color: tomato;
+    }*/
+    
+    0% {
+        background-color:goldenrod;
+        left: 0px;
+        top:0px;
+    }
+    25% {
+        background-color: yellow;
+        left:400px;
+        top:0px;
+    }
+    50% {
+        background-color:orange;
+        left: 400px;
+        top:400px;
+    }
+    75% {
+        background-color:hotpink;
+        left: 0px;
+        top:400px;
+    }
+    100% {
+        background-color: saddlebrown;
+        left: 0px;
+        top:0px;
+    }
+}
+
+body {
+    background-color: dodgerblue;
+
+}
+div {
+    position: relative;
+    background-color: wheat;
+    width: 200px;
+    height: 100px;
+    animation-name: anmi;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-fill-mode: both;
+}

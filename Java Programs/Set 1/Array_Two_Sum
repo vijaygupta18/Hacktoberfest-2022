@@ -1,0 +1,25 @@
+// Leetcode ques no.1 of Arrays in java 
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        int i = 0;
+        while(i < nums.length){
+            for(int j = i+1; j < nums.length; j++){
+                if(nums[i]+nums[j] == target){
+                    list.add(i);
+                    list.add(j);
+                }
+            }
+            i++;
+        }
+        
+        int[] arr = new int[list.size()];
+        
+        for(int k = 0; k < list.size(); k++){
+            arr[k] = list.get(k);
+        }
+        
+        return arr;
+    }
+}

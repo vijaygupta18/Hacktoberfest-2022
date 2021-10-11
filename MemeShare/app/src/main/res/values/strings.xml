@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MemeShare</string>
+    <string name="share">SHARE</string>
+    <string name="next">NEXT</string>
+</resources>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="hundred">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Register Form</title>
+</head>
+
+<body class="hundred">
+  <div class="reg-container">
+    <div class="error">
+      <% if(error) %>
+      <p><%= error %></p>
+    </div>
+
+    <div class="reg-form">
+      <h3>Create New Account</h3>
+      <p class="fake">You can use fake email and username to try the website<br>
+        No email confirmation
+      </p>
+
+
+      <form action="" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" minlength="8" placeholder="Password" required><br>
+        <button class="submit-button" type="submit">Register</button>
+      </form>
+      <button class="cancel-button" onclick="window.location.href = '/users/login';">Cancel</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright &#169; SpeaksApp. Developed by <a href="https://github.com/anggidast" target="_blank">AnggiDast</a>.</p>
+  </footer>
+
+</body>
+
+</html>

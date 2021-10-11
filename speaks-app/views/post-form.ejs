@@ -1,0 +1,50 @@
+<%- include('partials/header')  -%>
+
+<% if(user.title) { %>
+<title>Edit Post</title>
+<% } else { %>
+<title>New Post</title>
+<% } %>
+</head>
+
+<body>
+  <%- include('partials/nav')  -%>
+
+  <div class="add-container add-top">
+    <% if(user.title) { %>
+    <h1 class="center">Edit post</h1>
+    <% } else { %>
+    <h1 class="center">Create a new post</h1>
+    <% } %>
+    <div class="post-form">
+      <% if(user.title) { %>
+      <img src="<%= user.img_url %>" height="200" alt="">
+      <form method="POST">
+        <% } else { %>
+        <form method="POST" enctype="multipart/form-data">
+          <% } %>
+          <% if(user.title) { %>
+          <% } %>
+          <% if(!user.title) { %>
+          <input type="file" class="upload" name="image" accept="image/*" onchange="loadFile(event)" required>
+          <img id="output" width="320" style="display: none;">
+          <% } %>
+          <input type="text" name="title" id="title" placeholder="Post title" maxlength="20" value="<%= user.title %>" required>
+          <textarea name="description" id="description" cols="10" rows="4" maxlength="100" placeholder="Post description" required><%= user.description %></textarea>
+          <input type="text" id="img_url" name="img_url" style="display: none;" value="<%= user.img_url %>">
+          <input type="text" id="UserId" name="UserId" style="display: none;" value="<%= user.UserId %>">
+          <button class="add-button" type="submit">Submit</button>
+        </form>
+
+        <script>
+          var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+            image.removeAttribute('style');
+          };
+        </script>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    background: rgba(2, 177, 209, 0.44);
+}
+
+
+#quote-box
+{  margin-top: 100px;
+  margin-left:25%;
+  margin-right:25%;
+  border: 2px solid black;
+    width:auto;
+    height:auto;
+    padding:30px;
+    text-align: justify;
+  }
+
+#text
+{
+    font-size: 40px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+#author
+{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+    text-align: right;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#buttons
+{
+    margin: 5px;
+    padding:5px;
+}
+
+
+#tweet-quote
+{
+    font-size: 10px;
+    float: right;
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+#new-qoute
+{
+    float:left;
+    font-size: 10px;
+}
+
+.btn
+{
+    border-radius: 2px;
+    padding: 5px;
+    background: black;
+    color:white;
+}
+
+.btn:hover
+{
+    background: white;
+    border:2px solid black;
+    color: black;
+    transition: color background 2s;
+}

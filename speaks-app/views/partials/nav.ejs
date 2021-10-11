@@ -1,0 +1,39 @@
+<nav>
+  <div class="left-side">
+    <a href="/posts">
+      <h3>Speaks</h3>
+    </a>
+    <form class="search-form" action="/users" method="get">
+      <input class="search" type="text" name="username" placeholder="Search user" required>
+      <button class="search-button" type="submit"><img class="icon" src="/magnifying-glass.svg" width="18" alt="search-icon" title="Search"></button>
+    </form>
+  </div>
+
+  <ul>
+    <li><a href="/posts">Home</a></li>
+    <li><a href="/users/<%= id %> ">Profile</a></li>
+    <li><a href="/favorites">Favorites</a></li>
+    <% if (id == 2) { %>
+    <li><a href="/users/">Users</a></li>
+    <% } %>
+    <li><a href="/about">About</a></li>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+
+  <!-- Hamburger Menu -->
+  <div class="menu-toggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('slide');
+  });
+</script>

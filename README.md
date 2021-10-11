@@ -1,3 +1,8 @@
+ ## Sadly this repository is excluded from Hactoberfest project.
+ ## Thanks for your contribution hope you might have learnt the basics of open source contribution.
+ ## Feel free to reach me for any queries.
+
+
 # Hacktoberfest-2021
 An Open Source repository to Teach people How to contribute to open sources.
 

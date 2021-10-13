@@ -1,4 +1,4 @@
- ## Sadly this repository is excluded from Hactoberfest project.
+ ## Unfortunately this repository is excluded from Hactoberfest project.
  ## Thanks for your contribution hope you might have learnt the basics of open source contribution.
  ## Feel free to reach me for any queries.
 

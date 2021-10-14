@@ -1,0 +1,30 @@
+from tkinter import *
+from tkinter import messagebox
+import pymysql
+
+root=Tk()
+root.geometry("400x300")
+root.resizable(0,0)
+
+def play():
+      pass
+
+def pause():
+      pass
+def stop():
+      pass
+
+
+root.title("MUSIC PLAYER")
+Label(root,text="MUSIC",fg='black',width=30,bg='skyblue',relief='solid',font=('Arial',15,'bold')).pack()
+#Button(root,text='SUBMIT',width=15,command=reg).place(x=130,y=150)
+
+
+Button(root,text="PLAY",fg='black',width=5,bg='orange',command=play,relief='solid',font=('Arial',15,'bold')).place(x=160,y=100)
+
+Button(root,text="PAUSE",fg='black',width=7,bg='yellow',command=pause,relief='solid',font=('Arial',15,'bold')).place(x=120,y=150)
+
+Button(root,text="STOP",fg='black',width=5,bg='red',relief='solid',command=stop,font=('Arial',15,'bold')).place(x=220,y=150)
+
+
+root.mainloop()

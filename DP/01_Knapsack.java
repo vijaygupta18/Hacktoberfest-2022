@@ -31,7 +31,7 @@ public class knapsack_01_memoization {
 			return dp[n][W];
 		}
 		else {  // if(wt[n-1] > W)
-			dp[n][W] = knapSack(wt, val, W, n-1, dp);  //i.e. we don't include this and move on.
+			dp[n][W] = knapSack(wt, val, W, n-1, dp);  //i.e. we don't include this and move on
 			return dp[n][W];
 		}
 	}

@@ -1,0 +1,31 @@
+import java.awt.*;
+
+
+public class AWTAssociation
+{
+	AWTAssociation()
+	{
+		Frame f=new Frame();
+
+		Label l=new Label("Student Name :");
+
+		TextField tf=new TextField();
+
+		Button b=new Button("Submit");
+        
+        l.setBounds(100,50,100,100);
+        tf.setBounds(100,100,100,100);
+        b.setBounds(150,250,100,100);
+		f.add(l);
+		f.add(tf);
+		f.add(b);
+		f.setVisible(true);
+		f.setSize(300,300);
+		f.setTitle("This is done by Association");
+		f.setLayout(null);
+	}
+	public static void main(String []args)
+	{
+		AWTAssociation object1=new AWTAssociation();
+	}
+}

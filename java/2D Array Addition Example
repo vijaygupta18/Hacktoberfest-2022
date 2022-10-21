@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Arry2DAdd {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array:");
+		int size=sc.nextInt();
+		int num1[][]=new int[size][size];
+		int num2[][]=new int[size][size];
+		System.out.println("Enter numbers in array:");
+		for(int i=0;i<size;i++){
+			for(int j=0;j<size;j++) {
+			  num1[i][j]=sc.nextInt();
+			  num2[i][j]=sc.nextInt();
+		}
+	  }
+		System.out.println("Resultant Matrix:");
+		for(int i=0;i<size;i++){
+			for(int j=0;j<size;j++) {
+			 System.out.print(" ");
+			 System.out.print(num1[i][j]+num2[i][j]);
+		}
+			System.out.println();
+	  }
+
+	}
+
+}

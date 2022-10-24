@@ -33,9 +33,9 @@ class Main{
 
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter the string: ");
-        String s = in.nextLine();
+        	String s = in.nextLine();
         
-        System.out.println("Output: string with char count");
+		System.out.println("Output: string with char count");
 		System.out.println(format_string_with_char_count(s));
 	}
 }
